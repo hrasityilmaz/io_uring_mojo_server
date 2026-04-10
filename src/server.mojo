@@ -8,7 +8,7 @@ def main() raises:
     if args.__len__() >= 2:
         port = Int(String(args[1]))
 
-    print("mojo -> c io_uring echo server baslatiliyor, port:", port)
+    print("starting server, port:", port)
 
     var rc = external_call["start_echo_server", c_int](port)
-    print("server cikti kodu:", rc)
+    print("server code:", rc)
