@@ -1,0 +1,16 @@
+[workspace]
+channels = ["https://conda.modular.com/max-nightly", "conda-forge"]
+name = "hello"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+#build = "mkdir -p build && gcc -shared -fPIC src/hello.c -o build/libhello.so -luring && mojo build src/hello.mojo -o build/hello -Xlinker -Lbuild -Xlinker -lhello -Xlinker -luring -Xlinker -rpath -Xlinker '$ORIGIN'"
+#run = "./build/hello"
+build = "mkdir -p build && gcc -shared -fPIC src/server.c -o build/libserver.so -luring && mojo build src/server.mojo -o build/server -Xlinker -Lbuild -Xlinker -lserver -Xlinker -luring -Xlinker -rpath -Xlinker '$ORIGIN'"
+run = "./build/server"
+run8080 = "./build/server 8080"
+
+
+[dependencies]
+mojo = "==0.26.2"
