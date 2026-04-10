@@ -79,3 +79,7 @@ README.md
 - buffer pools
 - partial write handling
 - Mojo-side request processing
+
+## LICENCE
+
+**MIT
