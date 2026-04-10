@@ -1,6 +1,6 @@
 # io_uring TCP Echo Server (Mojo + C)
 
-A minimal high-performance TCP echo server using:
+> Minimal high-performance TCP server using io_uring with Mojo FFI.
 
 - Linux `io_uring`
 - C (liburing)
